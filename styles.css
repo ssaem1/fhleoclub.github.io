@@ -10,6 +10,10 @@
     --ff-accent: "Roboto", sans-serif;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body,
 h1,
 h2,
@@ -21,13 +25,12 @@ p {
 }
 
 h1{
-    font-size: 6rem;
+    font-size: 8rem;
     font-weight: 600;
 }
 
 h2{
     font-size: 2rem;
-    
 }
 
 h3{
@@ -40,6 +43,103 @@ img{
     max-width: 100%;
     display: inline-block;
     object-fit: cover;
+}
+
+.navbar{
+    padding: 1.5% 14%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+.navbar-links{
+    height: 100%;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    color: white;
+}
+
+.navbar .logo a{
+    text-decoration: none;
+}
+
+.navbar-links li:hover{
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    vertical-align: middle;
+    top: 1.1rem;
+    right: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33px;
+    height: 24px;
+    color: white;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
 }
 
 .gallery-element{
@@ -75,6 +175,10 @@ button:active{
 
 a{
     color: var(--clr-neutral-200);
+}
+
+.main-title{
+    padding: 12vh 14%;
 }
 
 .sub{
@@ -152,8 +256,12 @@ a{
 }
 
 .bg-blue{
-    color: var(--clr-primary-100);
-    background-color: var(--clr-primary-500);
+    height: 100vh;
+    width: 100%;
+    color: var(--clr-neutral-100);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(pictures/269949897_344656750380899_4382031329720486470_n.jpg);
+    background-position: centre;
+    background-size: cover;
 }
 
 .bg-off-white{
