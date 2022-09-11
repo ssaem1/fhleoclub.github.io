@@ -98,13 +98,13 @@ img{
     justify-content: space-between;
     width: 33px;
     height: 24px;
-    color: white;
+    color: var(--clr-neutral-800);
 }
 
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: white;
+    background-color: var(--clr-neutral-800);
     border-radius: 10px;
 }
 
