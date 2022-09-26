@@ -10,6 +10,8 @@
     --ff-accent: "Roboto", sans-serif;
 }
 
+/* General styling */
+
 *{
     box-sizing: border-box;
 }
@@ -22,6 +24,12 @@ footer,
 p {
   margin: 0;
   font-family: var(--ff-primary);
+}
+
+p,
+body{
+    line-height: 1;
+    font-weight: 400;
 }
 
 h1{
@@ -44,6 +52,8 @@ img{
     display: inline-block;
     object-fit: cover;
 }
+
+/* navbar styling */
 
 .navbar{
     padding: 1.5% 14%;
@@ -145,8 +155,98 @@ img{
     max-height: 65%;
 }
 
-p,
-body{
-    line-height: 1;
-    font-weight: 400;
+/* main title styling */
+
+.main-title{
+    padding: 5%;
+    text-align: center;
 }
+
+/* split styling */
+
+.split-pictures{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 7% 20%;
+    gap: 10%;
+}
+
+.double-space{
+    line-height: 2;
+}
+
+/* styling the leo sign thing */
+
+.split-words{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 7rem;
+    padding: 10% 20%;
+}
+
+.leo-description{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+/* footer styling*/
+
+.footer-container{
+    padding: 5% 18%;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    white-space: nowrap;
+}
+
+footer{
+    color: var(--clr-neutral-200);
+    background-color: var(--clr-primary-500);
+}
+
+.split-footer{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.footer-title{
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    color: var(--clr-primary-100);
+}
+
+@media (max-width: 900px){
+
+    .footer-container{
+        padding: 8% 16%;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-subtitle{
+        padding-top: 10vw;
+    }
+
+    .split-footer{
+        flex-direction: column;
+    }
+
+    .social-media{
+        line-height: 3;
+    }
+}
+
+
+/* background colors */
+
+.bg-blue{
+    background-color: var(--clr-primary-500);
+    color: var(--clr-neutral-100);
+}
+

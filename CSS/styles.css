@@ -193,22 +193,6 @@ a{
     gap: 10%;
 }
 
-.split2{
-    display: inline-flex;
-    flex-direction: row;
-    gap: 5%;
-}
-
-.footer-container{
-    padding: 5% 18%;
-}
-
-.footer-grid{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    white-space: nowrap;
-}
-
 .content-container{
     padding: 5% 12%;
 }
@@ -222,11 +206,6 @@ a{
     column-gap: 6%;
 }
 
-.leo{
-    padding-top: 1vh;
-    padding-bottom: 2vh;
-    color: var(--clr-primary-100);
-}
 .pushdown{
     padding-top: 3vh;
 }
@@ -255,6 +234,59 @@ a{
     text-align: center;
 }
 
+/* footer styling*/
+
+.footer-container{
+    padding: 5% 18%;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    white-space: nowrap;
+}
+
+footer{
+    color: var(--clr-neutral-200);
+    background-color: var(--clr-primary-500);
+}
+
+.split-footer{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.footer-title{
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    color: var(--clr-primary-100);
+}
+
+@media (max-width: 900px){
+
+    .footer-container{
+        padding: 8% 16%;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-subtitle{
+        padding-top: 10vw;
+    }
+
+    .split-footer{
+        flex-direction: column;
+    }
+
+    .social-media{
+        line-height: 3;
+    }
+}
+
+
 .bg-blue{
     height: 100vh;
     width: 100%;
@@ -272,16 +304,10 @@ a{
     background-color: var(--clr-primary-100);
 }
 
-footer{
-    color: var(--clr-neutral-200);
-    background-color: var(--clr-primary-500);
-}
+
 
 @media (max-width: 900px){
 
-    .subtitle{
-        padding-top: 10vw;
-    }
 
     h3{
         padding: 5vw 0;
@@ -300,31 +326,11 @@ footer{
         text-align: center;
     }
 
-    .about{
-        text-align: center;
-    }
-
-    .split2{
-        flex-direction: column;
-    }
-
     .gallery{
         grid-template-columns: 1fr;
     }
 
     .gallery-container{
         padding: 8% 16%;
-    }
-
-    .footer-container{
-        padding: 8% 16%;
-    }
-
-    .social-media{
-        line-height: 3;
-    }
-
-    .footer-grid{
-        grid-template-columns: 1fr;
     }
 }
