@@ -1,3 +1,4 @@
+
 :root{
     --clr-primary-100: #f9c910;
     --clr-primary-500: #0a3dab;
@@ -10,50 +11,7 @@
     --ff-primary: "Lato", sans-serif;
     --ff-accent: "Roboto", sans-serif;
 }
-
-/* General styling */
-
-*{
-    box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-h3,
-footer,
-p {
-  margin: 0;
-  font-family: var(--ff-primary);
-}
-
-p,
-body{
-    line-height: 1;
-    font-weight: 400;
-}
-
-h1{
-    font-size: 8rem;
-    font-weight: 600;
-}
-
-h2{
-    font-size: 2rem;
-}
-
-h3{
-    padding: 1vw 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-img{
-    max-width: 100%;
-    display: inline-block;
-    object-fit: cover;
-}
-
+  
 /* navbar styling */
 
 .navbar{
@@ -151,70 +109,156 @@ img{
         display: flex;
     }
 }
-
-.gallery-element{
-    max-height: 65%;
-}
-
-/* main title styling */
-
-.main-title{
-    padding: 5%;
+  /* general styling */
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  body,
+  h1,
+  h2,
+  h3,
+  footer,
+  p {
+  margin: 0;
+  font-family: var(--ff-primary);
+  }
+  body{
+      overflow-x: hidden;
+  }
+  
+  
+  h1{
+    font-size: 8rem;
+    font-weight: 600;
+  }
+  
+  h2{
+    font-size: 2rem;
+    }
+  
+    h3{
+        padding: 1vw, 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+  
+  img{
+    max-width: 100%;
+    display: inline-block;
+    object-fit: cover;
+  }
+  
+  .text-centre{
     text-align: center;
-    font-size: 2.75rem;
-    color: var(--clr-primary-600);
-    font-weight: 790;
-}
-
-.second-title{
-  font-size: 2rem;
-  font-weight: 300;
-  color: var(--clr-primary-600);
-}
-
-/* split styling */
-
-.split-pictures{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 7% 20%;
-    gap: 10%;
-}
-
-.double-space{
+  }
+  
+  .double-space{
     line-height: 2;
-}
+  }
+  
+  p,
+  body{
+      line-height: 1;
+      font-weight: 400;
+  }
+  
 
-/* styling the leo sign thing */
-
-.split-words{
+    .split-pictures{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 7rem;
-    padding: 10% 20%;
-}
-
-.leo-description{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-
-@media (max-width: 800px){
-    .split-pictures{
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 7% 20%;
-        gap: 10%;
+    padding: 0 10%;
+    gap: 4%;
     }  
     .leo-description{
         display: grid;
         grid-template-columns: 1fr;
         gap: 4rem;
     }
+
+    .main-image{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+  /* main title styling */
+  
+  .main-title{
+      padding: 5%;
+      text-align: center;
+      font-size: 2.75rem;
+      color: var(--clr-primary-600);
+      font-weight: 790;
+  }
+  
+  .second-title{
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--clr-primary-600);
+  }
+  
+  .initiatives{
+    padding: 0% 5%;
 }
 
+  .container{
+    padding: 0 10%;
+  }
+  /* gallery styling */
+  .gallery-container{
+    padding: 6% 0;
+  }
+  
+  .gallery-grid{
+      padding: 2% 10%;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      width: 100vw;
+      display: grid;
+      row-gap: 25px;
+      column-gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 340px));
+  }
+  
+  .gallery-element{
+      width: 400px;
+      height: 340px;
+      object-fit: cover;
+      overflow: hidden;
+      opacity: 1;
+      transition: .3s ease-in-out;
+  }
+  
+  @media (max-width: 1400px){
+    .gallery-element{
+        height: 240px;
+        width: 300px;
+    }
+    .gallery-grid{
+        padding: 5% 5%;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
+    }
+}
 
+  @media (max-width: 900px) {
+      .popup-image img{
+          width: 50%;
+      }
+  }
+  
+/* navigation styling */
+    .nav-container{
+        padding: 1% 2%;
+    }
+    .initiative-nav{
+        display: grid;
+        column-gap: 55%;
+        grid-template-columns: 1fr 1fr;
+        white-space: nowrap;
+    }
 /* footer styling*/
 
 .pushdown{
@@ -266,12 +310,3 @@ footer{
         line-height: 3;
     }
 }
-
-
-/* background colors */
-
-.bg-blue{
-    background-color: var(--clr-primary-500);
-    color: var(--clr-neutral-100);
-}
-

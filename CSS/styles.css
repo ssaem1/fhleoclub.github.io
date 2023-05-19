@@ -1,6 +1,7 @@
 :root{
     --clr-primary-100: #f9c910;
     --clr-primary-500: #0a3dab;
+    --clr-primary-600: #0d54a1;
 
     --clr-neutral-100: #fff;
     --clr-neutral-200: #FAF9F6;
@@ -34,7 +35,7 @@ h2{
 }
 
 h3{
-    padding: 1vw 0;
+    padding: 1vw, 0;
     font-size: 1.2rem;
     font-weight: 700;
 }
@@ -143,13 +144,15 @@ img{
 }
 
 .gallery-element{
-    max-height: 65%;
+    height: 85%;
+    width: 100%;
 }
 
 p,
 body{
     line-height: 1;
-    font-weight: 400;
+    font-weight: 100;
+    font-size: 1rem;
 }
 
 button{
@@ -181,29 +184,45 @@ a{
     padding: 12vh 14%;
 }
 
+.second-title{
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--clr-primary-600);
+}
+
 .sub{
     font-size: 2rem;
     padding: 2vw 0;
 }
 
 .split{
-    display: inline-flex;
-    flex-direction: row;
-    padding: 4% 20%;
-    gap: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 7% 13%;
+    gap: 2%;
+}
+
+@media (max-width: 800px){
+    .split{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 7% 20%;
+        gap: 10%;
+    }  
 }
 
 .content-container{
     padding: 5% 12%;
 }
 .gallery-container{
-    padding: 4% 12%;
+    padding: 5% 13%;
 }
 
 .gallery{
+    padding-top: 2%;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr ;
-    column-gap: 6%;
+    column-gap: 2%;
 }
 
 .pushdown{
@@ -226,7 +245,7 @@ a{
 }
 
 .border{
-    border:0.5rem solid #0a3dab;
+    border:0.5rem solid var(--clr-primary-500);
     border-radius: 2rem;
 }
 
@@ -287,21 +306,31 @@ footer{
 }
 
 
+
+
 .bg-blue{
     height: 100vh;
     width: 100%;
     color: var(--clr-neutral-100);
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(leoClubBackgroundImage.jpg);
     background-position: centre;
+    background-size: cover; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .bg-off-white{
     background-color: var(--clr-neutral-200);
+
 }
 
 .bg-yellow{
-    background-color: var(--clr-primary-100);
+    color:var(--clr-neutral-200);
+    background-color: var(--clr-primary-500);
 }
 
 
@@ -309,8 +338,17 @@ footer{
 @media (max-width: 900px){
 
 
+    .gallery-element{
+        height: 450px;
+        width: 450px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+    }
+
+    
     h3{
-        padding: 5vw 0;
+        padding: 3vw 0;
     }
 
     .gallery-element{
@@ -328,9 +366,11 @@ footer{
 
     .gallery{
         grid-template-columns: 1fr;
+        gap: 5vh;
     }
 
     .gallery-container{
         padding: 8% 16%;
     }
+
 }

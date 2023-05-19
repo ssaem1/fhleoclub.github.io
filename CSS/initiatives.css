@@ -1,6 +1,7 @@
 :root{
     --clr-primary-100: #f9c910;
     --clr-primary-500: #0a3dab;
+    --clr-primary-600: #0d54a1;
 
     --clr-neutral-100: #fff;
     --clr-neutral-200: #FAF9F6;
@@ -160,11 +161,26 @@ body{
     font-weight: 400;
 }
 
+
 /* main title styling */
 
 .main-title{
     padding: 5%;
     text-align: center;
+    font-size: 2.75rem;
+    color: var(--clr-primary-600);
+    font-weight: 790;
+}
+
+.second-title{
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--clr-primary-600);
+}
+
+.sub{
+    padding-top: 2%;
+    font-weight: 400;
 }
 
 .initiatives{
@@ -174,24 +190,92 @@ body{
 /* gallery styling */
 
 .gallery-container{
-    padding: 4% 22%;
+    padding: 4% 4vw;
 }
 
 .gallery-grid{
-    display: grid;
-    grid-template-columns:1fr 1fr;
-    grid-column-gap: 100px;
-    grid-row-gap: 0px;
- 
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+    gap: 3%;
+    justify-content: center;
+    /* grid-template-columns:1fr 1fr;
+    grid-column-gap: 5%;
+    grid-row-gap: 0px; */
 }
 
+
 .gallery-element{
-    width: 100%;
-    height: 70%;
+    padding: 5% 0% 0% 0%;
+    /* object-fit: cover; */
+    transition: 0.2s linear;
+    cursor: pointer;
+    height: 500px;
+    width: 600px;
     object-fit: cover;
 }
 
+/* .popup-image{
+    position: fixed;
+    top:0; left:0;
+    background: rgba(0,0,0,0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image span{
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 50px;
+    font-weight: 10px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    height: 80%;
+    object-fit: cover;
+} */
+
+@media (max-width: 1400px){
+    .gallery-element{
+        height: 400px;
+        width: 450px;
+    }
+}
+
+@media (max-width: 800px){
+    .gallery-element{
+        padding: 6% 1vw;
+        /* object-fit: cover; */
+        transition: 0.2s linear;
+        cursor: pointer;
+        height: auto;
+        max-height: 400px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    
+}
+/* image stling */
+
+.gallery-element:hover{
+    transform: scale(1.01);
+}
+
 /* footer styling*/
+
+.pushdown{
+    padding-top: 3vh;
+}
 
 .footer-container{
     padding: 5% 18%;
@@ -228,10 +312,6 @@ footer{
 
     .footer-grid{
         grid-template-columns: 1fr;
-    }
-
-    .footer-subtitle{
-        padding-top: 10vw;
     }
 
     .split-footer{
