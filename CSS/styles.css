@@ -14,6 +14,31 @@
 *{
     box-sizing: border-box;
 }
+  
+.MainContainer {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  .ContentContainer {
+    position: relative;
+    display: block;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  .ParallaxContainer {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    transform: translateZ(-1px) scale(2);
+  }
+  
 
 body,
 h1,
@@ -313,14 +338,9 @@ footer{
     width: 100%;
     color: var(--clr-neutral-100);
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(leoClubBackgroundImage.jpg);
-    background-position: centre;
-    background-size: cover; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+    padding: 0;
 }
 
 .bg-off-white{
